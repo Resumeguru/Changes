@@ -1,0 +1,239 @@
+ <html>
+  <head>
+   <title>Alpha: Ideayet Homepage</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   
+   <meta name="description" 
+content="Ideayet is an upcoming social media platform where users can get paid to post and share ideas, and view all of their ideas in one central location." />
+
+   <meta charset="utf-8">
+   <meta name="language" content="en-US" />
+   <meta name="author" content="Kermit Burchell Mitchell III" />
+
+
+<!-- Favicon -->
+
+<link rel="icon" href="http://www.ideayet.com/logo2.png" type="image/x-icon" /> 
+
+<!-- Stylesheets -->
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-light-green.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Icons -->
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+
+</style>
+<!-- Check to see if they are logged in -->
+
+</head>
+
+<body>
+
+<input type="submit" class="w3-btn w3-round-jumbo w3-orange" value="Log Out" />
+</form>
+
+<h1 class="w3-jumbo">The Brainstorm</h1>
+
+<div class="w3-half w3-round w3-border" id="brainstorm">
+
+   <span>Brainstorm Filters:</span>
+
+   <label>Category</label>
+   <input list="brainstormCategory" name="brainstormCategory" placeholder="Type or Choose" onblur="" />
+    <datalist id="brainstormCategory">
+     <option value="Anime">Anime</option>
+     <option value="Art">Art</option>
+     <option value="Business">Business</option>
+     <option value="Cartoon">Cartoon</option>
+     <option value="Fashion">Fashion</option>
+     <option value="Film">Film</option>
+     <option value="Food">Food</option>
+     <option value="Games">Games</option>
+     <option value="Government">Government</option>
+     <option value="Literature">Literature</option>
+     <option value="Music">Music</option>
+     <option value="Nonprofit">Nonprofit</option>
+     <option value="Sports">Sports</option>
+     <option value="Technology" selected>Technology</option>
+     <option value="Travel">Travel</option>
+    </datalist>
+
+   <label>Purpose</label>
+
+   <input type="radio" name="ideaPurpose" value="Social" onblur="" />
+   <label>Social</label>
+
+   <input type="radio" name="ideaPurpose" value="Equity" onblur="" />
+   <label>Equity</label>
+
+
+
+ <div class="w3-card-2 w3-round w3-border w3-center" id="postIdeaContainer">
+  <form id="postIdea" method="POST" action="Alpha_Ideayet_PostIdea_Form.php" accept-charset="UTF-8" name="postIdea" onsubmit="return validatePostIdea()" target="_blank">
+   <br />
+
+   <p class="w3-large"></p>
+
+   <label class="w3-text-blue-grey w3-large">Category</label>
+   <input list="ideaCategory" style="width: 88%" name="ideaCategory" placeholder="Type or Choose" onblur="return validateIdeaCategory()" required />
+    <datalist id="ideaCategory">
+     <option value="Anime">Anime</option>
+     <option value="Art">Art</option>
+     <option value="Business">Business</option>
+     <option value="Cartoon">Cartoon</option>
+     <option value="Fashion">Fashion</option>
+     <option value="Film">Film</option>
+     <option value="Food">Food</option>
+     <option value="Games">Games</option>
+     <option value="Government">Government</option>
+     <option value="Literature">Literature</option>
+     <option value="Music">Music</option>
+     <option value="Nonprofit">Nonprofit</option>
+     <option value="Sports">Sports</option>
+     <option value="Technology" selected>Technology</option>
+     <option value="Travel">Travel</option>
+    </datalist>
+    <span id="ideaCategoryErr"></span> <br />
+
+   <label class="w3-padding"></label><input style="width: 50%" type="text" name="ideaName" minlength="1" maxlength="60" onblur="return validateIdeaName()" placeholder="Status: What are your ideas for today?" required /> 
+   <span id="ideaNameErr"></span> <br /> 
+
+   <label class="w3-padding"></label><textarea name="ideaContent" rows="2" cols="50" minlength="1" onblur="return validateIdeaContent()" placeholder="What's your idea?" required></textarea> 
+   <span id="ideaContentErr"></span> <br />
+
+   <label class="w3-padding"></label><textarea name="ideaKeywords" minlength="1" rows="1" cols="50" onblur="return validateIdeaKeywords()" placeholder="Keyword1, Keyword2" required></textarea> 
+   <span id="ideaKeywordsErr"></span> <br /> 
+
+   <label><b>Add: </b></label>
+   <i class="fa fa-camera w3-large w3-text-indigo" onclick="document.getElementById('addImages').style.display='block'"></i>
+
+<!-- Add Images Modal -->
+
+<div id="addImages" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('addImages').style.display='none'" class="w3-closebtn">x</span>
+      <br />
+
+      <p><b>Add image URLs below using the format:</b>
+         <br>Image File (www.example.com/imageName.jpg) [Accepted File Types: <b>.jpeg .jpg .png .gif</b>]. 
+         <br>Separate multiple URLs with commas (,).
+      </p>            
+      <textarea name="ideaImages" rows="2" cols="50" onblur="return validateIdeaImages()" placeholder="ImageURL1, ImageURL2"></textarea>
+      <span id="ideaImagesErr"></span> <br /><br /> <a href="http://www.imgur.com" target="_blank">Need to upload an image? Click here!</a>
+  
+    </div>
+  </div>
+</div>
+
+   <i class="fa fa-music w3-large w3-text-indigo" onclick="document.getElementById('addAudio').style.display='block'"></i>
+
+<!-- Add Audio Modal -->
+
+<div id="addAudio" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('addAudio').style.display='none'" class="w3-closebtn">x</span>
+      <br />
+
+      <p><b>Add audio URLs below using one of the formats:</b> 
+         <br>SoundCloud (soundcloud.com/username/trackname)
+         <br>MP3 File (www.example.com/audioName.mp3). 
+         <br>Separate multiple URLs with commas (,).
+      </p>      
+      <textarea name="ideaAudio" rows="2" cols="50" onblur="return validateIdeaAudio()" placeholder="AudioURL1, AudioURL2"></textarea>
+      <span id="ideaAudioErr"></span> <br /><br /> <a href="https://soundcloud.com" target="_blank">Need to upload audio? Click here!</a>
+  
+    </div>
+  </div>
+</div>
+
+
+   <i class="fa fa-youtube-play w3-large w3-text-indigo" onclick="document.getElementById('addVideos').style.display='block'"></i>
+
+<!-- Add Videos Modal -->
+
+<div id="addVideos" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('addVideos').style.display='none'" class="w3-closebtn">x</span>
+      <br />
+
+      <p><b>Add video URLs below using one of the formats:</b> 
+         <br>Youtube (youtube.com/watch?v=VideoID) [<b>VideoID</b> is a string of unique numbers and letters, <b>case sensitive</b>.]
+         <br>MP4 File (www.example.com/videoName.mp4). 
+         <br>Separate multiple URLs with commas (,).
+      </p>      
+      <textarea name="ideaVideos" rows="2" cols="50" onblur="return validateIdeaVideos()" placeholder="VideoURL1, VideoURL2"></textarea>
+      <span id="ideaVideosErr"></span> <br /><br /> <a href="www.youtube.com" target="_blank">Need to upload a video? Click here!</a>
+  
+    </div>
+  </div>
+</div>
+
+   <i class="fa fa-link w3-large w3-text-indigo" onclick="document.getElementById('addLinks').style.display='block'"></i> <br />
+
+<!-- Add Links Modal -->
+
+<div id="addLinks" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('addLinks').style.display='none'" class="w3-closebtn">x</span>
+      <br />
+
+      <p><b>Add link URLs below using one of the formats:</b> 
+         <br>Website (www.example.com). 
+         <br>Website File (www.example.com/fileName.php)
+         <br>Separate multiple URLs with commas (,).
+      </p>      
+      <textarea name="ideaLinks" rows="2" cols="50" onblur="return validateIdeaLinks()" placeholder="LinkURL1, LinkURL2"></textarea>
+      <span id="ideaLinksErr"></span> <br /><br /> 
+  
+    </div>
+  </div>
+</div>
+
+   <label class="w3-text-blue-grey w3-large">Visibility</label>
+
+   <input type="radio" name="ideaVisibility" value="Public" onblur="return validateIdeaVisibility()" />
+   <label>Public</label>
+
+   <input type="radio" name="ideaVisibility" value="Private" onblur="return validateIdeaVisibility()" />
+   <label>Private</label>
+
+   <span id="ideaVisibilityErr"></span> <br /> 
+
+
+   <label class="w3-text-blue-grey w3-large">Purpose</label>
+
+   <input type="radio" name="ideaPurpose" value="Social" onblur="return validateIdeaPurpose()" />
+   <label>Social</label>
+
+   <input type="radio" name="ideaPurpose" value="Equity" onblur="return validateIdeaPurpose()" />
+   <label>Equity</label>
+
+   <span id="ideaPurposeErr"></span> <br /> 
+
+    <button type="button" class="w3-btn w3-blue-grey w3-round w3-right"><i class="fa fa-lightbulb-o"></i> Post</button> 
+   
+   <!--<button onclick="">Save</button>-->
+   
+  <button type="button" class="w3-btn w3-blue-grey w3-round"><i class="fa fa-lightbulb-o"></i> Post</button> 
+  </form>
+ </div>
+</div>
+
+</body>
+
+</head>
+
+

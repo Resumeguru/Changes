@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome to Ideayet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+
+    jumbo {
+    width: 275px;
+	height: 175px;
+	border: 1px solid blue;
+	border-radius: 10px;
+}
+
+</style>
+<body class="w3-theme-l5">
+
+
+<nav>
+<ul class="w3-navbar w3-border w3-round w3-light-grey w3-card-4">
+  <li><a class="w3-indigo" href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li ><a href="#">Thinker</a></li>
+  <li><a href="#">Commenter</a></li>
+  <li><a>Investor</a></li>
+  <li class="w3-round-jumbo"><a href="#"><input type="search" name="filter.q" results="5" placeholder="Search great ideas"value="" style="height: 17px;"/></a></li>
+  <li><a href="#"><i class="fa fa-gear" style="font-size:20px;"></i></a></li>
+   <li><a href="#"><i class="fa fa-bell w3-hover-text-white" style="font-size:20px;"></i></a></li>
+  <li class="w3-right"><a href="#">Log out</a></li>
+</ul>
+</nav>
+<!-- Navbar 
+<div class="w3-top">
+ <ul class="w3-navbar w3-theme-d2 w3-left-align w3-large">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()">☰</a>
+  </li>
+  <li><a href="#" class="w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Ideayet</a></li>
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a></li>
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a></li>
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a></li>
+  <li class="w3-hide-small w3-dropdown-hover">
+    <a href="#" class="w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></a>     
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">One new friend request</a>
+      <a href="#">John Doe posted on your wall</a>
+      <a href="#">Jane likes your post</a>
+    </div>
+  </li>
+  <li class="w3-hide-small w3-right"><a href="#" class="w3-padding-large w3-hover-white" title="My Account"><img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAW5AAAAJDBmMjhlZWZhLWVhNTAtNDA2OS05OWVmLTU3MTQ2OWE1ZmIxMA.jpg" class="w3-circle" height="25" width="25" alt="Avatar"></a></li>
+ </ul>
+</div>
+--!>
+	
+<!-- Navbar on small screens -->
+
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px; margin-top:18px;">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card-2 w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">My Profile</h4>
+         <p class="w3-center"><img src="https://lh3.googleusercontent.com/-gHdX2EW5AdE/AAAAAAAAAAI/AAAAAAAAACM/qtPzDCwQ14c/s120-c/photo.jpg" class="w3-circle" height="135" width="135" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil w3-margin-right w3-text-theme"></i> Designer, UI</p>
+         <p><i class="fa fa-home w3-margin-right w3-text-theme"></i> London, UK</p>
+         <p><i class="fa fa-birthday-cake w3-margin-right w3-text-theme"></i> April 1, 1988</p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card-2 w3-round">
+        <div class="w3-accordion w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-btn-block w3-theme-l1 w3-left-align w3-margin-right w3-hover-text-black"><i class="fa fa-circle-o-notch w3-margin-right"></i> Start a Team</button>
+          <div id="Demo1" class="w3-accordion-content w3-container">
+            <p>Some text..</p>
+          </div>
+          <button onclick="myFunction('Demo2')" class="w3-btn-block w3-theme-l1 w3-left-align w3-hover-text-yellow"><i class="fa fa-envelope w3-margin-right w3-hover-opacity  "></i> Messaging</button>
+          <div id="Demo2" class="w3-accordion-content w3-container">
+            <p>Some other text..</p>
+          </div>
+	
+          <button onclick="myFunction('Demo3')" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-bell w3-margin-right"></i> Notifications</button>
+          <div id="Demo3" class="w3-accordion-content w3-container">
+         <div class="w3-row-padding">
+         <br>
+           <div class="w3-half">
+             <img src="img_lights.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="img_nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="img_mountains.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="img_forest.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="img_nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="img_fjords.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+			 
+         </div>
+			  
+          </div>
+        </div>      
+      </div>
+			  
+      <br>
+      
+  	<jumbo class="w3-card-2 w3-container w3-right w3-margin">
+  	  <h5><strong>Privacy Newsletter Terms of Use About Report Bugs Help Center Blog</strong>
+  	<br>
+  	<p class="w3-medium">Copyright 2015-2016 by Ideayet. All rights reserved.</p>
+  	</h5>
+	
+  	</jumbo>
+      <!-- Interests --> 
+      
+      
+	  
+      
+      <!-- Alert Box
+      <div class="w3-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-hover-text-grey w3-closebtn">×</span>
+        <p><strong>Hey!</strong></p>
+        <p>People are looking at your profile. Find out who.</p>
+      </div>
+    -->
+		  
+		  
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card-2 w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">Newsfeed/Brainstorm</h6>
+              <p contenteditable="true" class="w3-border w3-padding">Status: What is your idea today?</p>
+			  
+			  
+        
+		      <span><label class="w3-text-blue-grey w3-medium">Category  </label></span>
+		      <input onclick="document.getElementById('id01').style.display='block'" style="width: 90%" list="ideaCategory" name="ideaCategory" placeholder="Type or Choose" onblur="return validateIdeaCategory()" required />
+			  
+		       <datalist id="ideaCategory" >
+		        <option value="Anime">Anime</option>
+		        <option value="Art">Art</option>
+		        <option value="Business">Business</option>
+		        <option value="Cartoon">Cartoon</option>
+		        <option value="Fashion">Fashion</option>
+		        <option value="Film">Film</option>
+		        <option value="Food">Food</option>
+		        <option value="Games">Games</option>
+		        <option value="Government">Government</option>
+		        <option value="Literature">Literature</option>
+		        <option value="Music">Music</option>
+		        <option value="Nonprofit">Nonprofit</option>
+		        <option value="Sports">Sports</option>
+		        <option value="Technology" selected>Technology</option>
+		        <option value="Travel">Travel</option>
+		       </datalist>
+		       <span id="ideaCategoryErr"></span> 
+			   <br>
+			   
+			   <bigboy id="id01" style="display:none">
+<span onclick="this.parentElement.style.display='' ">
+
+		      <label class="w3-padding w3-hover-text-green"></label><textarea class="w3-col m12" name="ideaContent" rows="3" cols="50" minlength="1" onblur="return validateIdeaContent()" placeholder="What's your idea?" required></textarea> 
+		      <span id="ideaContentErr"></span> 
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			 
+			 
+		      <br>
+			  <label class="w3-padding"></label><textarea class="w3-col m6" name="ideaKeywords" minlength="1" rows="1" cols="50" onblur="return validateIdeaKeywords()" placeholder="Keyword1, Keyword2" required></textarea> 
+		      <span id="ideaKeywordsErr"></span>
+			  <span class="w3-right">
+			  
+			     <label><b>Add: </b></label>
+			     <i class="fa fa-camera w3-large w3-text-indigo w3-hover-text-blue w3-hover-opacity"  onclick="document.getElementById('addImages').style.display='block'"></i>
+
+			  <!-- Add Images Modal -->
+
+			  <div id="addImages" class="w3-modal  w3-animate-opacity">
+			    <div class="w3-modal-content">
+			      <div class="w3-container">
+			        <span onclick="document.getElementById('addImages').style.display='none'" class="w3-closebtn">x</span>
+			        <br />
+
+			        <p><b>Add image URLs below using the format:</b>
+			           <br>Image File (www.example.com/imageName.jpg) [Accepted File Types: <b>.jpeg .jpg .png .gif</b>]. 
+			           <br>Separate multiple URLs with commas (,).
+			        </p>            
+			        <textarea name="ideaImages" rows="2" cols="50" onblur="return validateIdeaImages()" placeholder="ImageURL1, ImageURL2"></textarea>
+			        <span id="ideaImagesErr"></span> <br /><br /> <a href="http://www.imgur.com" target="_blank">Need to upload an image? Click here!</a>
+  
+			      </div>
+			    </div>
+			  </div>
+
+			     <i class="fa fa-music w3-large w3-text-indigo w3-hover-text-black" onclick="document.getElementById('addAudio').style.display='block'"></i>
+
+			  <!-- Add Audio Modal -->
+
+			  <div id="addAudio" class="w3-modal">
+			    <div class="w3-modal-content">
+			      <div class="w3-container">
+			        <span onclick="document.getElementById('addAudio').style.display='none'" class="w3-closebtn">x</span>
+			        <br />
+
+			        <p><b>Add audio URLs below using one of the formats:</b> 
+			           <br>SoundCloud (soundcloud.com/username/trackname)
+			           <br>MP3 File (www.example.com/audioName.mp3). 
+			           <br>Separate multiple URLs with commas (,).
+			        </p>      
+			        <textarea name="ideaAudio" rows="2" cols="50" onblur="return validateIdeaAudio()" placeholder="AudioURL1, AudioURL2"></textarea>
+			        <span id="ideaAudioErr"></span> <br /><br /> <a href="https://soundcloud.com" target="_blank">Need to upload audio? Click here!</a>
+  
+			      </div>
+			    </div>
+			  </div>
+
+
+			     <i class="fa fa-youtube-play w3-large w3-text-indigo w3-hover-text-red w3-hover-opacity" onclick="document.getElementById('addVideos').style.display='block'"></i>
+
+			  <!-- Add Videos Modal -->
+
+			  <div id="addVideos" class="w3-modal">
+			    <div class="w3-modal-content">
+			      <div class="w3-container">
+			        <span onclick="document.getElementById('addVideos').style.display='none'" class="w3-closebtn">x</span>
+			        <br />
+
+			        <p><b>Add video URLs below using one of the formats:</b> 
+			           <br>Youtube (youtube.com/watch?v=VideoID) [<b>VideoID</b> is a string of unique numbers and letters, <b>case sensitive</b>.]
+			           <br>MP4 File (www.example.com/videoName.mp4). 
+			           <br>Separate multiple URLs with commas (,).
+			        </p>      
+			        <textarea name="ideaVideos" rows="2" cols="50" onblur="return validateIdeaVideos()" placeholder="VideoURL1, VideoURL2"></textarea>
+			        <span id="ideaVideosErr"></span> <br /><br /> <a href="www.youtube.com" target="_blank">Need to upload a video? Click here!</a>
+  
+			      </div>
+			    </div>
+			  </div>
+
+			     <i class="fa fa-link w3-large w3-text-indigo w3-hover-text-green w3-hover-opacity" onclick="document.getElementById('addLinks').style.display='block'"></i> <br />
+
+			  <!-- Add Links Modal -->
+
+			  <div id="addLinks" class="w3-modal w3-animate-opacity">
+			    <div class="w3-modal-content w3-animate-opacity">
+			      <div class="w3-container">
+			        <span onclick="document.getElementById('addLinks').style.display='none'" class="w3-closebtn">x</span>
+			        <br />
+
+			        <p><b>Add link URLs below using one of the formats:</b> 
+			           <br>Website (www.example.com). 
+			           <br>Website File (www.example.com/fileName.php)
+			           <br>Separate multiple URLs with commas (,).
+			        </p>      
+			        <textarea name="ideaLinks" rows="2" cols="50" onblur="return validateIdeaLinks()" placeholder="LinkURL1, LinkURL2"></textarea>
+			        <span id="ideaLinksErr"></span> <br /><br /> 
+  
+			      </div>
+			    </div>
+			  </div>
+		  </span>
+			  <br>
+			  <br>
+		      <label class="w3-text-blue-grey w3-medium">Visibility</label>
+			  
+			  <!-- POST -->
+			  
+               <button style="width:33.3%" type="button" class="w3-btn w3-blue-grey w3-round w3-right w3-medium"><i class="fa fa-lightbulb-o"></i> Post</button> 
+			   
+		      <input type="radio" name="ideaVisibility" value="Public" onblur="return validateIdeaVisibility()" />
+		      <label>Public</label>
+
+		      <input type="radio" name="ideaVisibility" value="Private" onblur="return validateIdeaVisibility()" />
+		      <label>Private</label>
+
+		      <span id="ideaVisibilityErr"></span> <br /> 
+
+
+		      <label class="w3-text-blue-grey w3-medium">Purpose</label>
+			  
+			    
+		      <input type="radio" name="ideaPurpose" value="Social" onblur="return validateIdeaPurpose()" />
+		      <label>Social</label>
+
+		      <input type="radio" name="ideaPurpose" value="Equity" onblur="return validateIdeaPurpose()" />
+		      <label>Equity</label>
+
+		      <span id="ideaPurposeErr"></span> <br /> 
+			  
+		  </bigboy>
+			  
+			  
+		
+			  
+			  
+			  
+			  
+			  
+			  
+	
+			  
+            </div>
+          </div>
+        </div>
+	</di>
+    </div>
+      
+      <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
+        <img src="https://pbs.twimg.com/profile_images/649001114294218754/CJDKE5eY.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+		<span class="w3-right w3-opacity">Business
+        <span> 1 min
+		</span>
+		</span>
+		
+        <span><h4>John Doe </h4>
+		 <span>
+			 IDEA Name
+		 </span>
+			 
+		</span>
+		
+			
+		
+        <hr class="w3-clear">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+              <img src="/Users/BrandonMitchell/Desktop/Ideayet Fundraise Material/Innovator shirt.PNG" style="width:100%" alt="Innovator X" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+              <img src="/Users/BrandonMitchell/Desktop/Ideayet Fundraise Material/Innovator grey hoodie.PNG" style="width:100%" alt="Innovator Y" class="w3-margin-bottom">
+          </div>
+        </div>
+		<pre> <i class="w3-margin-bottom w3-padding-left fa fa-chevron-up w3-hover-text-green w3-hover-opacity w3-tooltip" style="font-size:24px"></i> 5 <i class="w3-tooltip w3-margin-bottom fa fa-chevron-down w3-hover-text-red w3-hover-opacity" style="font-size:24px"></i> 6    <!--  <img src="/Users/BrandonMitchell/Desktop/Ideayet Pictures 2016'/comment.png" style="width: 10%; height: 10%; margin-top: 20px;"> </i> --><i  class="w3-margin-bottom w3-hover-text-blue w3-hover-opacity fa fa-commenting-o" style="font-size:24px"></i></pre> 
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+	
+	
+	  <div id="Demo9" class="w3-accordion-content w3-container">
+      <label class="w3-padding w3-hover-text-green"></label><textarea class="w3-col m12" name="ideaContent" rows="1" cols="20" minlength="1" onblur="return validateIdeaContent()" placeholder="Type to comment" required></textarea> 
+      <span id="ideaContentErr"></span>
+	  <button class="w3-btn w3-light-grey w3-right w3-round">Comment</button>
+	  </div>
+
+      </div>
+	  
+	  
+	  
+	  
+	  
+      
+      <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
+        <img src="img_avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">16 min</span>
+        <h4>Jane Doe</h4><br>
+        <hr class="w3-clear">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button type="button" class="w3-btn w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-btn w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>  
+
+      <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
+        <img src="img_avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">32 min</span>
+        <h4>Angie Jane</h4><br>
+        <hr class="w3-clear">
+        <p>Have you seen this?</p>
+        <img src="img_nature.jpg" style="width:100%" class="w3-margin-bottom">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button type="button" class="w3-btn w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-btn w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card-2 w3-round w3-white w3-center">
+          <div class="w3-container w3-white w3-padding w3-hover-light-grey w3-center">
+	Trending
+	</div>
+	<div class="w3-container w3-white w3-padding w3-center">
+	Top Rated
+	</div>
+	<div class="w3-container w3-white w3-padding w3-center">
+	New
+	</div>
+	<div class="w3-container w3-white w3-padding w3-center">
+	Dying
+	</div>
+		       
+      </div>
+      <br>
+      <!--
+      <div class="w3-card-2 w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Innovator Request</p>
+          <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAASXAAAAJDFhYzZhYWNjLWI2YzYtNDdhMi04MjQ1LWEyN2UyNjQ0MjdjYw.jpg" alt="Avatar" style="width: 120px; height: 120px;"><br>
+          <span>Jane Doe</span>
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-btn w3-green w3-round w3-hover-text-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-btn w3-red w3-round  w3-hover-text-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      -->
+     
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Footer</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+ 
+<script>
+// Accordion
+function myFunction(id) {
+    document.getElementById(id).classList.toggle("w3-show");
+    document.getElementById(id).previousElementSibling.classList.toggle("w3-theme-d1");
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function openNav() {
+    document.getElementById("navDemo").classList.toggle("w3-show");
+}
+</script>
+
+</body>
+</html> 

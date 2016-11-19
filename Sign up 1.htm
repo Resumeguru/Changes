@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alpha: Ideayet Sign Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description"
+content="Ideayet is an upcoming social media platform where users can get paid to post and share ideas, and view all of their ideas in one central location." />
+<meta charset="utf-8">
+<meta name="language" content="en-US" />
+<meta name="author" content="Kermit Burchell Mitchell III" />
+<!-- Favicon -->
+<link rel="icon" href="http://www.ideayet.com/logo2.png" type="image/x-icon" />
+<!-- Stylesheets -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-light-green.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Icons -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- Google+ Style Sheet -->
+<style type="text/css">
+#myBtn.demo {
+padding: 5px;
+background: #fff;
+cursor: pointer;
+line-height: 20px;
+border: 1px solid #e6e6e6;
+border-radius: 4px;
+}
+#myBtn.demo .icon {
+width: 20px;
+height: 20px;
+display: inline-block;
+background: url('http://www.ideayet.com/btn_google+_light_normal_ios.png') transparent 0 -40px no-repeat;
+}
+#myBtn.demo:hover {
+background-color: #cc3732;
+color: #fff;
+border: #dd4b39;
+}
+#myBtn.demo:hover .icon {
+background: url('http://www.ideayet.com/google+_logo_red.png') transparent 0 0px no-repeat;
+}
+#formA { opacity: .95;
+}
+#register {border-radius: 25px; border: 1px dotted #73AD21;
+}
+body {background-image: url("/Users/BrandonMitchell/Desktop/Ideayet Pictures 2016'/SignUP.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="http://www.ideayet.com/Ideayet_Project.php" />
+<meta property="og:title" content="The Ideayet Startup" />
+<meta property="og:description" content="Come learn about Ideayet!" />
+<meta property="og:image" content="http://www.wired.com/wp-content/uploads/2015/09/facebook-messenger-1200x630.jpg" />
+<meta property="og:type" content="product" />
+</head>
+<body>
+<!-- Facebook SDK -->
+<script>
+window.fbAsyncInit = function() {
+FB.init({
+appId : '1730934240526317',
+xfbml : true,
+version : 'v2.5'
+});
+};
+(function(d, s, id){
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) {return;}
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- Twitter SDK -->
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
+<script>
+document.getElementById('formA').style.width = "" + ((window.innerWidth)/2) + "px";
+document.getElementById('formA').style.marginLeft = "" + ((window.innerWidth)/4) + "px";
+</script>
+<!-- Google+ SDK -->
+<script >
+window.___gcfg = {
+lang: 'en-US',
+parsetags: 'onload'
+};
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- End of Navigation Bar -->
+<br>
+<header class="w3-container">
+<div class="w3-image w3-center">
+<br>
+</header>
+<br>
+
+<!-- Form for sign up -->
+<div class="w3-row">
+	<div class="w3-container w3-quarter" style="opacity: 0;">o</div>
+		
+<form id="formA" class="w3-container w3-card-4 w3-light-grey w3-half" method="POST" action="Alpha_Ideayet_Signup_Form1.php" accept-charset="UTF-8" name="form1" onsubmit="return validateForm1()" target="_blank">
+<br>
+<div class="w3-container" style="opacity: 1.0">
+<p class="w3-xxlarge w3-center"><b>Join <img  style="width: 20%; height: 20%;" src="/Users/BrandonMitchell/Desktop/Ideayet Pictures 2016'/ideayet.PNG"> Today</b></p>
+</div>
+<label class="w3-label">First Name </label><input type="text" name="username" minlength="1" maxlength="30" required onblur="return validateUsername()" placeholder="First Name" /><br>
+<span id="usernameErr"></span> <br />
+<label class="w3-label">Last Name </label><input type="text" name="username" minlength="1" maxlength="30" required onblur="return validateUsername()" placeholder="Last Name" /><br>
+<span id="usernameErr"></span> <br />
+<label class="w3-label">Username </label><input type="text" name="username" minlength="1" maxlength="30" required onblur="return validateUsername()" placeholder="Desired Username" /><br>
+<span id="usernameErr"></span> <br />
+<label class="w3-label">Password </label><input type="password" name="password" minlength="8" maxlength="30" required onblur="return validatePassword()"
+onfocus="return validatePasswordConfirm()" /><br>
+<span id="passwordErr"></span> <br />
+<label class="w3-label">Confirm Password </label><input type="password" name="passwordConfirm" minlength="8" maxlength="30" required onblur="return validatePasswordConfirm()"
+onfocus="return validatePassword()" /> <br>
+<span id="passwordConfirmErr"></span> <br />
+<label class="w3-label">Email </label><input type="email" name="email" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required
+onblur="return validateEmail()" placeholder="Your Email" /><br>
+<span id="emailErr"></span> <br />
+<label class="w3-label">Interests</label>
+<input class="" list="category1" name="category1" placeholder="Type or Choose" required onfocus="return validateCategory1()"
+onblur="return validateCategory2()" onblur="return validateCategory3()" />
+<datalist id="category1">
+<option value="Art">Art</option>
+<option value="Business">Business</option>
+<option value="Cartoon">Cartoon</option>
+<option value="Fashion">Fashion</option>
+<option value="Film">Film</option>
+<option value="Food">Food</option>
+<option value="Games">Games</option>
+<option value="Government">Government</option>
+<option value="Literature">Literature</option>
+<option value="Music">Music</option>
+<option value="Nonprofit">Nonprofit</option>
+<option value="Sports">Sports</option>
+<option value="Technology" selected>Technology</option>
+<option value="Travel">Travel</option>
+</datalist>
+<input class="" list="category2" name="category2" placeholder="Type or Choose" onblur="return validateCategory2()"
+onfocus="return validateCategory1()" onfocus="return validateCategory3()" />
+<datalist id="category2">
+<option value="Art">Art</option>
+<option value="Business">Business</option>
+<option value="Cartoon">Cartoon</option>
+<option value="Fashion">Fashion</option>
+<option value="Film">Film</option>
+<option value="Food">Food</option>
+<option value="Games">Games</option>
+<option value="Government">Government</option>
+<option value="Literature">Literature</option>
+<option value="Music">Music</option>
+<option value="Nonprofit">Nonprofit</option>
+<option value="Sports">Sports</option>
+<option value="Technology" selected>Technology</option>
+<option value="Travel">Travel</option>
+</datalist>
+<input class="" list="category3" name="category3" placeholder="Type or Choose" onblur="return validateCategory3()"
+onfocus="return validateCategory1()" onfocus="return validateCategory2()"/>
+<datalist id="category3">
+<option value="Art">Art</option>
+<option value="Business">Business</option>
+<option value="Cartoon">Cartoon</option>
+<option value="Fashion">Fashion</option>
+<option value="Film">Film</option>
+<option value="Food">Food</option>
+<option value="Games">Games</option>
+<option value="Government">Government</option>
+<option value="Literature">Literature</option>
+<option value="Music">Music</option>
+<option value="Nonprofit">Nonprofit</option>
+<option value="Sports">Sports</option>
+<option value="Technology" selected>Technology</option>
+<option value="Travel">Travel</option>
+</datalist>
+<span id="interestErr"></span> <br /><br />
+<div class="w3-center"><input id="register" class="w3-btn w3-round-jumbo w3-border-green w3-white w3-ripple" type="submit" value="Register" /></div>
+<br />
+</form>
+<div class="w3-container w3-quarter" style="opacity: 0;">o</div>
+</div>
+</body>
+</html>
